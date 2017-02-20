@@ -227,15 +227,4 @@ def get_run_data(run_dataframe, gpx, col_name):
 
     return run_dataframe
 
-col_name = ['Run_date', 'Run_year', 'Run_month', 'Total_time', 'Total_distance', 'Total_run_time', 'Total_run_distance', 'Start_time', 'End_time', 'Total_pause_time',
-                'Total_pause_distance', 'Total_uphill', 'Total_downhill']
-run_dataframe = pd.DataFrame(columns=col_name)
 
-gpx_file = open('20170216-213821-Run.gpx', 'r', encoding='utf-8')
-gpx = gpxpy.parse(gpx_file)
-# print(gpx)
-
-run_dataframe = get_run_data(run_dataframe, gpx, col_name)
-print(run_dataframe)
-
-## Open file
